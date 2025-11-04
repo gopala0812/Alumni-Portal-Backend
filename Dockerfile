@@ -1,4 +1,4 @@
-FROM openjdk:17-jdk-slim
+FROM eclipse-temurin:17-jdk
 WORKDIR /app
 
 # Copy dependencies
@@ -14,3 +14,4 @@ RUN javac -cp ".:lib/gson-2.10.1.jar" backend/Server.java
 
 # Run the server
 CMD ["java", "-cp", ".:lib/gson-2.10.1.jar", "backend.Server"]
+
